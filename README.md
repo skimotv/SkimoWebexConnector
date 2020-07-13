@@ -32,15 +32,20 @@ For each function - summarize step by step how the function works at a user leve
 ## Webex login using OAuth 2.0
 Must use a Webex account backed by Cisco Webex Common Identity (CI)
 
-## Retrieving List of Joined Rooms  
-
-## Retrieving List of Items in Rooms Drive 
-
-## Retrieve List of Calls from Items 
-
+## Retrieving List of Joined Teams  
+Use GET https://webexapis.com/v1/teams : Lists teams to which the authenticated user belongs
+## Retrieving Team Details 
+Use GET https://webexapis.com/v1/teams/{teamId} : Shows details for a team, by ID. Specify the team ID in the teamId parameter in the URI.
+## Retrieving List of Team Memberships
+Use GET https://webexapis.com/v1/team/memberships : Lists all team memberships for a given team, specified by the teamId query parameter. Use query parameters to filter the response.
+## Retrieve List of Recordings 
+Use GET https://webexapis.com/v1/recordings : Lists recordings. You can specify a date range and the maximum number of recordings to return. Only recordings of meetings hosted by or shared with the authenticated user will be listed. The list returned is sorted in descending order by the date and time that the recordings were created. Long result sets are split into pages.
 ## Display List of Calls in Skimo
 
 ## Rooms Call Select and Upload 
+
+# Source
+https://developer.webex.com/docs/api/getting-started
 
 # Contributing and Support
 We'd love that you contribute to the project. Before doing so, please contact jessicabhalerao@gmail.com for more info. 
