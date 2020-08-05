@@ -1,51 +1,20 @@
-# Overview
-## SkimoWebexConnector
-This repository has the connector to connect to the Cisco Webex conference service provider.
+# Skimo Connector Template
+Skimo Connector Template is a template to create connectors to the Skimo Engine
 
-The connector extends the SkimoConnectorTemplate, which utilizes Springboot and Thymeleaf
+#Skimo Newton
+Skimo Newton is a solution developed for the "New Normal" Zoom workplace using the Skimo Engine. Skimo Newton lets you skim any informational video such as webinar, learning or presentation video, enabling them to flip pages in the video, search for text on slides, search for utterances, annotate, highlight and tag the video as though it was an ebook.
 
-(refer to the template README for more info)
+#Skimo Engine
+Skimo Engine is a video summarization and indexing engine, which uses machine learning, computer vision and video processing algorithms to automatically detect points of interest based on the genre of the video, regardless of the language, through the easy-to-use REST API.
 
-The connector uses the Cisco Webex REST API to obtain data.
+#Skimo Newton Connectors
+Skimo Newton has connectors to conference providers such as:
+Skimo Microsoft Teams Connector
+Skimo Zoom Connector
+Skimo Google Meet Connector
+Skimo Cisco Webex Connector
+Skimo Slack Connector
+Skimo Blue Jeans Connector
 
-Visit the [Skimo Website](https://skimo.tv/) to test functionality. 
-
-## Functional Capabilities
-**FULL ELABORATION FOR FUNCTIONS LISTED IN NEXT SECTION**
-
-Allow users to login to Cisco Webex account using OAuth 2.0
-
-Retrieve a list of rooms that the user is a member of
-
-Retrieve a list of items in the selected room's drive 
-
-Retrieve a list of meetings from the items in the drive
-
-Display a list of Webex meetings on the Skimo website for the user
-
-Allow user to select a recording and upload recording to the Skimo server
-
-# Specific Functions 
-For each function - summarize step by step how the function works at a user level (UI inputs outputs)
-                  
-                  - summarize the code used to achieve said functionality 
-## Webex login using OAuth 2.0
-Must use a Webex account backed by Cisco Webex Common Identity (CI)
-
-## Retrieving List of Joined Teams  
-Use GET https://webexapis.com/v1/teams : Lists teams to which the authenticated user belongs
-## Retrieving Team Details 
-Use GET https://webexapis.com/v1/teams/{teamId} : Shows details for a team, by ID. Specify the team ID in the teamId parameter in the URI.
-## Retrieving List of Team Memberships
-Use GET https://webexapis.com/v1/team/memberships : Lists all team memberships for a given team, specified by the teamId query parameter. Use query parameters to filter the response.
-## Retrieve List of Recordings 
-Use GET https://webexapis.com/v1/recordings : Lists recordings. You can specify a date range and the maximum number of recordings to return. Only recordings of meetings hosted by or shared with the authenticated user will be listed. The list returned is sorted in descending order by the date and time that the recordings were created. Long result sets are split into pages.
-## Display List of Calls in Skimo
-
-## Rooms Call Select and Upload 
-
-# Source
-https://developer.webex.com/docs/api/getting-started
-
-# Contributing and Support
-We'd love that you contribute to the project. Before doing so, please contact jessicabhalerao@gmail.com for more info. 
+#Authoring connectors
+In order to author any connector to a conference provider use this repository which has the template and then use client integration APIs to integrate with your conference provider.
